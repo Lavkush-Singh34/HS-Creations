@@ -135,7 +135,8 @@ nav {
 
 /******************* intro section ****************/
 .intro {
-  min-height: 75vh;
+  min-height: 95vh;
+  position: relative;
   height: 85vh;
   background: rgb(235, 53, 53);
   display: flex;
@@ -147,6 +148,9 @@ nav {
     width: 50%;
     display: grid;
     place-items: center;
+    /* position: absolute;
+    top: 50%;
+    bottom: 50%; */
     padding: 3rem;
     && h1 {
       font-size: 3rem;
