@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-/* styles.css */
+
+/***************** utilities *********************/
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --accent-color: red;
+}
+/***************** utilities *********************/
+
 body {
+  background-color: var(--primary-color);
   font-family: "Poppins", serif;
   margin: 0;
   padding: 0;
@@ -12,6 +21,7 @@ a {
   color: #fff;
 }
 
+/* NAVBAR */
 /**************** harshit ************/
 .header {
   /* min-height: 100vh; */
@@ -121,6 +131,7 @@ nav {
 
   .nav-list.active {
     display: flex;
+    z-index: 999990;
   }
 
   .nav-list li {
@@ -140,25 +151,26 @@ nav {
   height: 85vh;
   background: rgb(235, 53, 53);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
   && #left {
     /* background: rgb(255, 106, 106); */
     /* min-width: 50%; */
-    width: 50%;
+    width: 40%;
     display: grid;
     place-items: center;
     /* position: absolute;
     top: 50%;
     bottom: 50%; */
-    padding: 3rem;
+    padding: 2rem;
     && h1 {
       font-size: 3rem;
     }
   }
   && #right {
     /* background: rgb(112, 112, 255); */
-    min-width: 50%;
+    width: 40%;
     display: grid;
     place-items: center;
     overflow: hidden;
