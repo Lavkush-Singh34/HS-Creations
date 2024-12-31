@@ -7,6 +7,7 @@
   --secondary-color: #000;
   --accent-color: red;
 }
+
 /***************** utilities *********************/
 
 body {
@@ -16,6 +17,11 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -164,16 +170,19 @@ nav {
     top: 50%;
     bottom: 50%; */
     padding: 2rem;
+
     && h1 {
       font-size: 3rem;
     }
   }
+
   && #right {
     /* background: rgb(112, 112, 255); */
     width: 40%;
     display: grid;
     place-items: center;
     overflow: hidden;
+
     && img {
       height: 70%;
       width: 100%;
@@ -201,20 +210,19 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.btn {
+/* .btn {
   display: inline-block;
   background-color: #007bff;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
-  /* text-decoration: none; */
   font-size: 1rem;
   transition: background-color 0.3s;
 }
 
 .btn:hover {
   background-color: #0056b3;
-}
+} */
 
 #services {
   background-color: #f8f9fa;
@@ -268,7 +276,7 @@ label {
 
 input,
 textarea {
-  width: 100%;
+  width: 95%;
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -478,23 +486,75 @@ input:checked+.slide-container .nav label {
 }
 
 
+/*********************** contact form *************************/
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* position: relative; */
+}
+
+.contact-field {
+  width: 40%;
+  min-width: 500px;
+  height: 32rem;
+  /* background-color: pink; */
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  height: 32rem;
+  background-color: teal;
+}
+
+.contact-field h3 {
+  color: #fb0000;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 10px
+}
+
+.contact-info {
+  box-sizing: border-box;
+  width: 40%;
+  min-width: 500px;
+  /* position: absolute; */
+  background-color: #1d2715;
+  /* right: 1px; */
+  /* top: 18%; */
+  height: 23rem;
+  padding: 40px;
+  margin: auto 0;
+  border-radius: 25px 0 0 25px;
+  color: var(--primary-color);
+
+  && h4 {
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+  }
+}
+
 /****************************** footer section ***************.**/
 
-footer .container{
-	max-width: 1170px;
-	margin:aut.o;
+footer .container {
+  max-width: 1170px;
+  margin: auto;
 }
-.row{
-	display: flex;
-	flex-wrap: wrap;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-ul{
-	list-style: none;
+
+ul {
+  list-style: none;
 }
-.footer{
-	background-color: #24262b;
-    padding: 2rem 0;
+
+.footer {
+  background-color: #24262b;
+  padding: 2rem 0;
 }
 
 
@@ -506,23 +566,24 @@ ul{
 
 
 
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
 }
-.footer .footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+
+.footer .footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
 
 /* i commented it and added .footer-col ul wehre i used flex-direction:coloumn */
@@ -535,50 +596,56 @@ ul{
   margin: 0;
   list-style: none;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 5px; /* Add space between list items if needed */
+  flex-direction: column;
+  /* Stack items vertically */
+  gap: 5px;
+  /* Add space between list items if needed */
 }
 
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
 }
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
 }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
 }
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
+@media(max-width: 767px) {
+  .footer-col {
     width: 50%;
     margin-bottom: 30px;
+  }
 }
-}
-@media(max-width: 574px){
-  .footer-col{
+
+@media(max-width: 574px) {
+  .footer-col {
     width: 100%;
-}
+  }
 }
