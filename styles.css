@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html {
@@ -173,6 +174,7 @@ nav {
 
     && h1 {
       font-size: 3rem;
+      color: var(--primary-color);
     }
   }
 
@@ -194,7 +196,8 @@ nav {
 
 
 #hero {
-  background: url('hero-image.jpg') no-repeat center center/cover;
+  /* background: url('./assets/date.jpg') no-repeat center center/cover; */
+
   color: #fff;
   text-align: center;
   padding: 4rem 1rem;
@@ -226,6 +229,13 @@ nav {
 
 #services {
   background-color: #f8f9fa;
+  padding: 0.5rem;
+
+  && h2 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2.2rem;
+  }
 }
 
 .service-list {
@@ -236,6 +246,7 @@ nav {
 }
 
 .service {
+  transition: all 0.2s ease-in;
   background: #fff;
   padding: 1.5rem;
   border-radius: 5px;
@@ -243,7 +254,58 @@ nav {
   flex: 1;
   min-width: 300px;
   text-align: center;
+
+  &&:hover {
+    box-shadow: 12px 10px 26px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 12px 10px 26px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 12px 10px 26px 0px rgba(0, 0, 0, 0.75);
+
+  }
+
+  && .examples {
+    transition: all 0.2s ease-in;
+    max-width: 100%;
+    height: 400px;
+    display: block;
+    cursor: pointer;
+
+    &&:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &&:nth-child(1) .examples {
+    background: url(./assets/journal_card.png) no-repeat center center;
+    /* background-size: cover; */
+    background-size: contain;
+    /* background-color: #fff; */
+  }
+
+  &&:nth-child(2) .examples {
+    background: url(./assets/colorful_printing_machine.png) no-repeat center center;
+    background-size: contain;
+  }
+
+  &&:nth-child(3) .examples {
+    background: url(./assets/mugs-2.webp) no-repeat center center;
+    background-size: contain;
+  }
+
 }
+
+.about {
+  margin: 3rem auto;
+
+  && h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  && p {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* Enhanced Contact Us Form Styles */
 #contact-form {
@@ -502,11 +564,6 @@ input:checked+.slide-container .nav label {
   margin-bottom: 3rem;
 }
 
-.contact-info {
-  height: 32rem;
-  background-color: teal;
-}
-
 .contact-field h3 {
   color: #fb0000;
   font-size: 40px;
@@ -529,9 +586,30 @@ input:checked+.slide-container .nav label {
   border-radius: 25px 0 0 25px;
   color: var(--primary-color);
 
+  &&:hover {
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    
+    transition: all 0.5s ease;
+  }
+
   && h4 {
     letter-spacing: 1px;
     padding-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  && .info_single {
+    margin: 30px 0px;
+
+    && i {
+      margin-right: 15px;
+    }
+  }
+
+  .info_single span {
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 }
 
