@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // corouse effets
   
-  // let currentIndex = 1; // Start with the first image
-  // const totalImages = 3; // Total number of images
+  let currentIndex = 1; // Start with the first image
+  const totalImages = 3; // Total number of images
   
-  // setInterval(() => {
-  //   currentIndex = (currentIndex % totalImages) + 1; // Cycle through images
-  //   document.getElementById(`img-${currentIndex}`).checked = true; // Check the next radio button
-  // }, 2000); // Change image every 2 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex % totalImages) + 1; // Cycle through images
+    document.getElementById(`img-${currentIndex}`).checked = true; // Check the next radio button
+  }, 2000); // Change image every 2 seconds
   
 
 // navigation bar to hamburger menu
