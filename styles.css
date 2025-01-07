@@ -1,8 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap'); */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap");
 
 * {
   margin: 0;
@@ -11,13 +9,19 @@
 }
 
 /***************** utilities *********************/
+
+/**** utilities *****/
+
+/* theme */
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
   --accent-color: red;
 }
 
-/**** utilities *****/
+/* theme end */
+
+/* module/reusable */
 .btn {
   display: inline-block;
   background-color: red;
@@ -31,7 +35,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   transition: scale 0.2s ease;
-
+  
   &&:hover {
     scale: 1.05;
   }
@@ -41,34 +45,37 @@
   }
 }
 
-
-
 .btn-grad {
-  background-image: linear-gradient(to right, #16A085 0%, #f43f3f 51%, #16A085 100%)
-}
-
-.btn-grad {
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  cursor: pointer;
-}
-
-.btn-grad:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-
+  background-image: linear-gradient(
+    to right,
+    #16a085 0%,
+    #f43f3f 51%,
+    #16a085 100%
+    );
+  }
+  
+  .btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* module/reusable end */
 /* utilities ends here */
 
 body {
@@ -81,6 +88,14 @@ body {
   height: 100%;
 }
 
+/* base rool */
+
+/* p,
+li,
+a {
+  font-size: 1.8rem; */
+  /* letter-spacing: 0.1rem;
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -127,7 +142,6 @@ nav {
   align-items: center;
   /* background-color: rgb(255, 255, 255); */
   /* box-shadow: -2px -2px 5px rgb(0, 0, 0), 2px -2px 5px rgb(0, 0, 0); */
-
 }
 
 #logo {
@@ -215,23 +229,35 @@ nav {
   }
 }
 
-
-
 /* style for slide-container */
 
 .slides-container {
   /* background-color: #ceb3b3; */
   background: hsla(18, 76%, 85%, 1);
 
-  background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(18, 76%, 85%, 1) 0%,
+    hsla(203, 69%, 84%, 1) 100%
+  );
 
-  background: -moz-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(18, 76%, 85%, 1) 0%,
+    hsla(203, 69%, 84%, 1) 100%
+  );
 
-  background: -webkit-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(18, 76%, 85%, 1) 0%,
+    hsla(203, 69%, 84%, 1) 100%
+  );
 
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6CFBE", endColorstr="#B9DCF2", GradientType=1);
   width: 100%;
   height: 100vh;
+  /* width: 1200px;
+  height: 500px; */
   position: relative;
   overflow: hidden;
 }
@@ -240,8 +266,8 @@ nav {
   position: absolute;
   height: 100%;
   width: 100%;
-  /* object-fit: cover; */
-  object-fit: contain;
+  object-fit: cover;
+  /* object-fit: contain; */
   animation: slideShow 16s infinite;
   opacity: 1;
   transform: translateX(100%);
@@ -327,15 +353,14 @@ nav {
 
 /* testing section */
 
-.test {
+/* .test {
   width: 100vw;
   height: 80vh;
-  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg) no-repeat center center;
-}
-
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9e/Timisoara_-_Regional_Business_Centre.jpg)
+    no-repeat center center;
+} */
 
 /* testing section end */
-
 
 #hero {
   /* background: url('./assets/date.jpg') no-repeat center center/cover; */
@@ -354,7 +379,6 @@ nav {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
-
 
 #services {
   background-color: #f8f9fa;
@@ -388,7 +412,6 @@ nav {
     box-shadow: 12px 10px 26px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 12px 10px 26px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 12px 10px 26px 0px rgba(0, 0, 0, 0.75);
-
   }
 
   && .examples {
@@ -411,7 +434,8 @@ nav {
   }
 
   &&:nth-child(2) .examples {
-    background: url(./assets/colorful_printing_machine.png) no-repeat center center;
+    background: url(./assets/colorful_printing_machine.png) no-repeat center
+      center;
     background-size: contain;
   }
 
@@ -419,7 +443,34 @@ nav {
     background: url(./assets/mugs-2.webp) no-repeat center center;
     background-size: contain;
   }
-
+  &&:nth-child(4) .examples {
+    background: url(./assets/GLOBE\ PHOTO\ FREM\ 03.jpg) no-repeat center center;
+    background-size: contain;
+  }
+  &&:nth-child(5) .examples {
+    background: url(./assets/T\ SHIRT\ GLOBE.jpg) no-repeat center center;
+    background-size: contain;
+  }
+  &&:nth-child(6) .examples {
+    background: url(./assets/GLOBE\ MUG.jpg) no-repeat center center;
+    background-size: contain;
+  }
+  &&:nth-child(7) .examples {
+    background: url(./assets/GLOBE\ VISITING\ CARD\ 06.jpg) no-repeat center center;
+    background-size: contain;
+  }
+  &&:nth-child(8) .examples {
+    background: url(./assets/BOTTEL\ GLOBE\ 04.jpg) no-repeat center center;
+    background-size: contain;
+  }
+  &&:nth-child(9) .examples {
+    background: url(./assets/05\ HOSPITAL\ FILE.jpg) no-repeat center center;
+    background-size: contain;
+  }
+  &&:nth-child(10) .examples {
+    background: url(./assets/0121212\ \(1\).jpg) no-repeat center center;
+    background-size: contain;
+  }
 }
 
 .about {
@@ -434,10 +485,6 @@ nav {
     font-size: 1.2rem;
   }
 }
-
-
-
-
 
 /* corousel effect */
 /* corousel effect end */
@@ -466,7 +513,7 @@ nav {
   font-size: 40px;
   letter-spacing: 1px;
   font-weight: 600;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .contact-field p {
@@ -527,7 +574,10 @@ textarea {
   transition: box-shadow 0.5s ease;
 
   &&:hover {
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+      -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+      12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+      -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   }
 
   && h4 {
@@ -576,14 +626,11 @@ ul {
   padding: 2rem 0;
 }
 
-
 /* i commented and use justify-content: space-between in its parent .row */
 /* .footer-col{
    width: 25%;
    padding: 0 15px;
 } */
-
-
 
 .footer-col h4 {
   font-size: 18px;
@@ -595,7 +642,7 @@ ul {
 }
 
 .footer .footer-col h4::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -660,7 +707,7 @@ ul {
 }
 
 /*responsive*/
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
@@ -671,7 +718,7 @@ ul {
   }
 }
 
-@media(max-width: 574px) {
+@media (max-width: 574px) {
   .footer-col {
     width: 100%;
   }
