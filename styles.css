@@ -183,6 +183,9 @@ nav {
 
 .nav-list li a {
   color: rgb(0, 0, 0);
+  &:hover {
+    color: #fff;
+  }
   margin: 0 20px;
   font-size: 1.2rem;
   /* text-decoration: none; */
@@ -192,6 +195,8 @@ nav {
 .nav-list li:hover {
   border-bottom: 2px solid white;
   background-color: #0088ff;
+  /* background: linear-gradient(to right top, red, blue, yellow);
+  color: #fff; */
   /* Hover background color for nav items */
 }
 
@@ -312,7 +317,8 @@ nav {
   min-height: 95vh;
   position: relative;
   height: 85vh;
-  background: rgb(219, 39, 39);
+  /* background: rgb(219, 39, 39); */
+  background: linear-gradient(to right top, red, blue, yellow);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -345,6 +351,7 @@ nav {
       height: 70%;
       width: 100%;
       object-fit: contain;
+      /* filter: drop-shadow(0 0 100px red); */
     }
   }
 }
@@ -383,11 +390,13 @@ nav {
 #services {
   background-color: #f8f9fa;
   padding: 0.5rem;
+  margin-bottom: 5rem;
 
   && h2 {
     text-align: center;
     margin: 2rem;
     font-size: 2.2rem;
+    text-transform: uppercase;
   }
 }
 
@@ -700,6 +709,13 @@ ul {
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
+}
+.footer-col .social-links:last-child ul li {
+  color: #bbbbbb;
+  cursor: pointer;
+  &&:hover {
+    color: #fff;
+  }
 }
 
 .footer p {
